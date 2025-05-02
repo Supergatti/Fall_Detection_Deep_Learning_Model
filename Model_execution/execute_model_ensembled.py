@@ -56,8 +56,9 @@ for d in data:
 
 # use model and write the json file for a video
 print("loading model and computing probability for each frame...")
-cnn_model = keras.models.load_model('./final_cnn_model.h5')
-lstm_model = keras.models.load_model('./final_lstm_model.h5')
+# Load models without compiling initially
+# cnn_model = keras.models.load_model(r'E:\AIProject\Fall_Detection_Deep_Learning_Model\Trained_model\final_cnn_model.h5', compile=False)
+lstm_model = keras.models.load_model(r'E:\AIProject\Fall_Detection_Deep_Learning_Model\Trained_model\final_lstm_model.h5', compile=False)
 dictionary = {}
 dictionary['falling'] = []
 test_cnn = []
